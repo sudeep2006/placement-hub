@@ -1,0 +1,11 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+function generatePDF(){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.text(document.getElementById('name').value, 10, 10);
+  doc.text(document.getElementById('education').value, 10, 20);
+  doc.text(document.getElementById('skills').value, 10, 30);
+  doc.save('Resume.pdf');
+}
+</script>

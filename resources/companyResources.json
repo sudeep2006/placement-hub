@@ -1,0 +1,12 @@
+{
+  "TCS": {
+    "aptitude": ["https://example.com/tcs-aptitude1", "https://example.com/tcs-aptitude2"],
+    "technical": ["https://github.com/example/tcs-dsa", "https://github.com/example/tcs-java"],
+    "HR": ["https://example.com/tcs-hr.pdf"]
+  },
+  "Amazon": {
+    "aptitude": ["https://example.com/amazon-aptitude"],
+    "technical": ["https://github.com/example/amazon-dsa"],
+    "HR": ["https://example.com/amazon-hr.pdf"]
+  }
+}

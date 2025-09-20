@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Placement Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- LOGIN MODAL -->
+    <div id="authModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('authModal')">&times;</span>
+        <h2>Login / Sign Up</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+      <h1>Placement Hub</h1>
+      <button onclick="openModal('authModal')">Login / Sign Up</button>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" class="hidden">
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tablink" onclick="openTab(event,'resources')">Company Resources</button>
+        <button class="tablink" onclick="openTab(event,'dsa')">DSA Tracker</button>
+        <button class="tablink" onclick="openTab(event,'resume')">Resume Builder</button>
+        <button class="tablink" onclick="openTab(event,'chatbot')">AI Chatbot</button>
+        <button class="tablink" onclick="openTab(event,'premium')">Premium</button>
+      </div>
+
+      <!-- TABS CONTENT -->
+      <div id="resources" class="tabcontent">
+        <h2>Company Resources</h2>
+        <select id="companySelect" onchange="showResources()">
+          <option value="">Select Company</option>
+          <option value="TCS">TCS</option>
+          <option value="Amazon">Amazon</option>
+        </select>
+        <div id="resourcesDisplay"></div>
+      </div>
+
+      <div id="dsa" class="tabcontent">
+        <h2>DSA Tracker</h2>
+        <div class="progress-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <ul id="dsaList"></ul>
+      </div>
+
+      <div id="resume" class="tabcontent">
+        <h2>Resume Builder</h2>
+        <a href="resume_builder/resume.html" target="_blank">Open Resume Builder</a>
+      </div>
+
+      <div id="chatbot" class="tabcontent">
+        <h2>AI Chatbot</h2>
+        <a href="https://huggingface.co/spaces/your-space" target="_blank">Open Chatbot</a>
+      </div>
+
+      <div id="premium" class="tabcontent">
+        <h2>Premium Features</h2>
+        <button id="payButton">Unlock Premium via UPI</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../resources/companyResources.json"></script>
+  <script src="auth/auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
