@@ -1,0 +1,23 @@
+body { font-family: Arial; background:#f0f2f5; margin:0; padding:0; }
+.container { width:90%; margin:auto; padding-top:20px; }
+header { display:flex; justify-content:space-between; align-items:center; }
+header h1 { color:#333; }
+button { padding:10px 15px; margin:5px; cursor:pointer; border:none; border-radius:5px; background:#3399cc; color:#fff; }
+button:hover { background:#007acc; }
+.hidden { display:none; }
+
+/* MODAL */
+.modal { display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.5); }
+.modal-content { background:#fff; margin:10% auto; padding:20px; border:1px solid #888; width:300px; border-radius:10px; }
+.close { color:#aaa; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+.close:hover { color:#000; }
+
+/* TABS */
+.tabs { display:flex; margin-top:20px; }
+.tablink { flex:1; background:#ddd; margin-right:2px; }
+.tablink:hover { background:#ccc; }
+.tabcontent { display:none; padding:15px; background:#fff; margin-top:5px; border-radius:5px; }
+
+/* DSA Tracker Progress */
+.progress-container { width:100%; background:#ddd; border-radius:5px; margin-bottom:10px; }
+.progress-bar { width:0%; height:20px; background:#3399cc; border-radius:5px; text-align:center; color:#fff; }
